@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        Moderador.Menu();
+        System.out.println("Hola gitHub");
     }
 }
