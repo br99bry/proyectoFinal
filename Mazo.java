@@ -47,9 +47,18 @@ public class Mazo {
             tarjetas.add(tarjetaNumerica);
         }
 
+        for(int i = 1; i < 2; i++){
+            TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
+            tarjetaCastigo.fijarColor(i);
+            tarjetas.add(tarjetaCastigo);
 
+
+
+        }
 
         System.out.println(tarjetas.toString());
+
+
     }
 
     public void barajeaMazo(){
