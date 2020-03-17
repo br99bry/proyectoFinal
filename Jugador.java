@@ -26,7 +26,8 @@ public class Jugador {
     }
 
     public void agregarTarjeta(Tarjeta tarjeta){
-
+        tarjetas = new ArrayList<Tarjeta>();
+        tarjetas.add(tarjeta);
     }
 
     public void decirUno(){

@@ -1,8 +1,9 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Mazo {
     private int numTarjeta;
-    private ArrayList<Tarjeta> tarjetas;
+    private ArrayList<Tarjeta> tarjetas  = new ArrayList<Tarjeta>();;
 
     public Mazo(){
         
@@ -10,7 +11,7 @@ public class Mazo {
 
 
     public void iniciaMazo (){
-        tarjetas = new ArrayList<Tarjeta>();
+
         for (int j = 0; j <2 ; j++) {
             for (int i = 1; i <10 ; i++) {
                 TarjetaNumerica tarjetaNumerica = new TarjetaNumerica();
@@ -49,15 +50,16 @@ public class Mazo {
 
 
 
-        System.out.println(tarjetas.toString());
+
     }
 
     public void barajeaMazo(){
-
+        Collections.shuffle(tarjetas);
+        //System.out.println(tarjetas.toString());
     }
 
     public void eliminaTarjeta(){
-
+        tarjetas.remove(0);
     }
 
     public void agregaTarjeta(){
@@ -77,7 +79,6 @@ public class Mazo {
     public String toString() {
         return "Mazo{" +
                 "numTarjeta=" + numTarjeta +
-                ", tarjetas=" + tarjetas +
-                '}';
+                ", tarjetas=\n" + tarjetas;
     }
 }

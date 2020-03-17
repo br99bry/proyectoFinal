@@ -10,9 +10,9 @@ public class Uno {
     private int numJugadores;
     private int sentido;
     private Tarjeta tarjeta;
-    private Mazo mazo;
+    private Mazo mazo = new Mazo();
     private Mazo pila;
-    private ArrayList<Jugador> jugadores;
+    private ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 
     public Uno(){
 
@@ -35,7 +35,7 @@ public class Uno {
                     iniciar();
                 }
 
-        jugadores = new ArrayList<Jugador>();
+
         for (int i = 0; i <getNumJugadores() ; i++) {
             Jugador jugador = new Jugador(i+1);
             jugadores.add(jugador);
@@ -47,16 +47,29 @@ public class Uno {
             System.out.print(jugador+"\n");
         }
 
-        Mazo mazo = new Mazo();
-        mazo.iniciaMazo();
 
+        mazo.iniciaMazo();
+        mazo.barajeaMazo();
+        System.out.println();
+        System.out.println(mazo.toString());
+        System.out.println();
     }
 
     public void  jugar(){
+        //System.out.println(mazo.toString());
+        for (int i = 0; i <getNumJugadores() ; i++) {
+            jugadores.get(i).agregarTarjeta(mazo.proporcionaTarjeta());
+            System.out.println(jugadores.get(i).toString());
+            mazo.eliminaTarjeta();
+        }
 
+        System.out.println();
+        System.out.println(mazo.toString());
+        System.out.println();
+        //System.out.println(jugadores.size());
 
-            jugadores.get(0).revuelveMazo(mazo);
-            jugadores.get(0).tomarCartas(mazo,21);
+            //jugadores.get(0).revuelveMazo(mazo);
+            //jugadores.get(0).tomarCartas(mazo,21);
 
 
     }
