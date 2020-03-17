@@ -40,6 +40,13 @@ public class Mazo {
             }
         }
 
+        for (int i = 1; i <5 ; i++) {
+            TarjetaNumerica tarjetaNumerica = new TarjetaNumerica();
+            tarjetaNumerica.fijarColor(i);
+            tarjetaNumerica.setNumero(0);
+            tarjetas.add(tarjetaNumerica);
+        }
+
 
 
         System.out.println(tarjetas.toString());
