@@ -5,13 +5,16 @@ public class Tarjeta {
     private int numColor;
     private int pos;
 
+    public Tarjeta(){
 
+    }
     public int jugarTarjeta(){
-        return ;
+        int i=0;
+        return i;
     }
 
     public void fijarColor(int i){
-        return ;
+
     }
 
 

@@ -4,6 +4,10 @@ public class Jugador {
     private int numJugador;
     private ArrayList<Tarjeta> tarjetas;
 
+    public Jugador(int numJugador){
+        this.numJugador = numJugador;
+    }
+
 
     public void tomarCartas(Mazo m,int n){
 
@@ -13,11 +17,15 @@ public class Jugador {
 
     }
 
-    public void repartirCartas(ArrayList<Jugador>,Mazo m){
+    public void repartirCartas(ArrayList<Jugador> jugadores,Mazo m){
 
     }
 
     public Tarjeta jugarTarjeta(Tarjeta tarjeta){
+        return tarjeta;
+    }
+
+    public void agregarTarjeta(Tarjeta tarjeta){
 
     }
 
@@ -25,6 +33,11 @@ public class Jugador {
 
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Jugador{" +
+                "numJugador=" + numJugador +
+                ", tarjetas=" + tarjetas +
+                '}';
+    }
 }

@@ -22,7 +22,8 @@ public class Mazo {
     }
 
     public Tarjeta proporcionaTarjeta(){
-
+        Tarjeta tarjeta = new Tarjeta();
+        return tarjeta;
     }
 
     public ArrayList<Tarjeta> proporcionarTarjetas() {

@@ -3,7 +3,9 @@ public class TarjetaNumerica {
 
 
     public int jugarTarjeta(){
-        return ;
+        int i=0;
+
+        return i;
     }
 
 

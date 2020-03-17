@@ -4,10 +4,12 @@ public class TarjetaCastigo {
 
 
     public int juegaTarjeta(){
-
+        int i=0;
+        return i;
     }
 
-    public int getTipoCastigo(){
-        return ;
+    public int getCastigo(){
+        int i=0;
+        return i;
     }
 }
