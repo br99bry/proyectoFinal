@@ -1,21 +1,17 @@
 import java.util.ArrayList;
 
-public class Tarjeta {
-    private ArrayList<String> color;
-    private int numColor;
-    private int pos;
+public abstract class Tarjeta {
+    protected ArrayList<String> colores;
+    protected int numColor;
+    protected int pos;
 
-    public Tarjeta(){
 
-    }
     public int jugarTarjeta(){
         int i=0;
         return i;
     }
 
-    public void fijarColor(int i){
-
-    }
+    public abstract void fijarColor(int i);
 
 
 

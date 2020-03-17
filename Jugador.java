@@ -9,12 +9,12 @@ public class Jugador {
     }
 
 
-    public void tomarCartas(Mazo m,int n){
-
+    public void tomarCartas(Mazo mazo,int n){
+        mazo.proporcionarTarjetas(n);
     }
 
-    public void revuelveMazo(Mazo m){
-
+    public void revuelveMazo(Mazo mazo){
+        mazo.barajeaMazo();
     }
 
     public void repartirCartas(ArrayList<Jugador> jugadores,Mazo m){

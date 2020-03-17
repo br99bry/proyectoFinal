@@ -4,12 +4,48 @@ public class Mazo {
     private int numTarjeta;
     private ArrayList<Tarjeta> tarjetas;
 
-
-    public void iniciaMazo (){
-
+    public Mazo(){
+        
     }
 
-    public void barajaMazo(){
+
+    public void iniciaMazo (){
+        tarjetas = new ArrayList<Tarjeta>();
+        for (int j = 0; j <2 ; j++) {
+            for (int i = 1; i <10 ; i++) {
+                TarjetaNumerica tarjetaNumerica = new TarjetaNumerica();
+                tarjetaNumerica.fijarColor(1);
+                tarjetaNumerica.setNumero(i);
+                tarjetas.add(tarjetaNumerica);
+
+            }
+
+            for (int i = 1; i <10 ; i++) {
+                TarjetaNumerica tarjetaNumerica = new TarjetaNumerica();
+                tarjetaNumerica.fijarColor(2);
+                tarjetaNumerica.setNumero(i);
+                tarjetas.add(tarjetaNumerica);
+            }
+            for (int i = 1; i <10 ; i++) {
+                TarjetaNumerica tarjetaNumerica = new TarjetaNumerica();
+                tarjetaNumerica.fijarColor(3);
+                tarjetaNumerica.setNumero(i);
+                tarjetas.add(tarjetaNumerica);
+            }
+            for (int i = 1; i <10 ; i++) {
+                TarjetaNumerica tarjetaNumerica = new TarjetaNumerica();
+                tarjetaNumerica.fijarColor(4);
+                tarjetaNumerica.setNumero(i);
+                tarjetas.add(tarjetaNumerica);
+            }
+        }
+
+
+
+        System.out.println(tarjetas.toString());
+    }
+
+    public void barajeaMazo(){
 
     }
 
@@ -22,11 +58,19 @@ public class Mazo {
     }
 
     public Tarjeta proporcionaTarjeta(){
-        Tarjeta tarjeta = new Tarjeta();
-        return tarjeta;
+
+        return tarjetas.get(0);
     }
 
-    public ArrayList<Tarjeta> proporcionarTarjetas() {
+    public ArrayList<Tarjeta> proporcionarTarjetas(int num) {
         return tarjetas;
+    }
+
+    @Override
+    public String toString() {
+        return "Mazo{" +
+                "numTarjeta=" + numTarjeta +
+                ", tarjetas=" + tarjetas +
+                '}';
     }
 }

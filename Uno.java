@@ -44,12 +44,20 @@ public class Uno {
         Iterator<Jugador> nombreIterator = jugadores.iterator();
         while(nombreIterator.hasNext()){
             Jugador jugador = nombreIterator.next();
-            System.out.print(jugador+" / ");
+            System.out.print(jugador+"\n");
         }
+
+        Mazo mazo = new Mazo();
+        mazo.iniciaMazo();
 
     }
 
     public void  jugar(){
+
+
+            jugadores.get(0).revuelveMazo(mazo);
+            jugadores.get(0).tomarCartas(mazo,21);
+
 
     }
 
