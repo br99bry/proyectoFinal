@@ -83,32 +83,11 @@ public class Uno {
 
         //System.out.println("El jugador que reparte es: \n" + jugadores.get(jugadorQueReparte).toString());
         jugadores.get(jugadorQueReparte).repartirCartas(jugadores,mazo);
-
-
-        for (int i = 0; i <getNumJugadores() ; i++) {
-
-           // System.out.println(jugadores.get(i).toString());
-
-        }
+        
         System.out.println();
         System.out.println(mazo);
 
 
-
-
-        /*for (int i = 1; i <getNumJugadores() ; i++) {
-            if((jugadores.get(i-1).getTarjetas().get(0))>(jugadores.get(i).getTarjetas().get(0))){
-
-            }
-        }*/
-
-        /*System.out.println();
-        System.out.println(mazo.toString());
-        System.out.println();*/
-        //System.out.println(jugadores.size());
-
-            //jugadores.get(0).revuelveMazo(mazo);
-            //jugadores.get(0).tomarCartas(mazo,21);
 
 
     }
