@@ -129,6 +129,10 @@ public class Mazo {
         return t;
     }
 
+    public ArrayList<Tarjeta> getTarjetas() {
+        return tarjetas;
+    }
+
     @Override
     public String toString() {
         return "Mazo{" +

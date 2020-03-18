@@ -50,9 +50,9 @@ public class Uno {
 
         mazo.iniciaMazo();
         mazo.barajeaMazo();
-        System.out.println();
+        /*System.out.println();
         System.out.println(mazo.toString());
-        System.out.println();
+        System.out.println();*/
     }
 
     public void  jugar(){
@@ -81,11 +81,22 @@ public class Uno {
             }
         }
 
-        //System.out.println("El jugador que reparte es: \n" + jugadores.get(jugadorQueReparte).toString());
+        System.out.println("El jugador que reparte es: \n" + jugadores.get(jugadorQueReparte).toString());
         jugadores.get(jugadorQueReparte).repartirCartas(jugadores,mazo);
-        
-        System.out.println();
-        System.out.println(mazo);
+        System.out.println("Se han repartido las cartas");
+        do{
+            sentido = 1;
+            while (sentido==1){
+                System.out.println("Es turno de: " + jugadores.get(jugadorQueReparte));
+
+            }
+        }while (mazo.getTarjetas().size()>0);
+
+
+
+
+        /*System.out.println();
+        System.out.println(mazo);*/
 
 
 
