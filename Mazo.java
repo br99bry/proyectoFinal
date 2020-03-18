@@ -47,17 +47,18 @@ public class Mazo {
             tarjetas.add(tarjetaNumerica);
         }
 
-        for(int i = 1; i < 2; i++){
+    for (int k= 0; k < 2; k++) {
+        for (int j = 1; j < 4 ; j++) {
+           for(int i =0; i < 8 ; i++){
             TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
-            tarjetaCastigo.fijarColor(i);
+            tarjetaCastigo.fijarCastigo(1);
+            tarjetaCastigo.fijarColor(j);
             tarjetas.add(tarjetaCastigo);
-
-
-
+           }
         }
+    }
 
-        System.out.println(tarjetas.toString());
-
+         System.out.println(tarjetas.toString());
 
     }
 
