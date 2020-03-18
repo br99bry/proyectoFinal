@@ -48,6 +48,27 @@ public class TarjetaCastigo extends Tarjeta {
         }
     }
 
+        public void fijarCastigo(int i){
+
+        switch (i){
+            case 1:
+                    this.tipoCastigo = i;
+                break;
+            case 2:
+                    this.tipoCastigo = i;
+                break;
+            case 3:
+                    this.tipoCastigo = i;
+                break;
+            case 4:
+                    this.tipoCastigo = i;
+                break;
+            case 5:
+                    this.tipoCastigo = i;
+            break;
+        }
+    }
+
     @Override
     public String toString() {
         return "TarjetaCastigo{" +
