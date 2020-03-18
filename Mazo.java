@@ -3,10 +3,10 @@ import java.util.Collections;
 
 public class Mazo {
     private int numTarjeta;
-    private ArrayList<Tarjeta> tarjetas  = new ArrayList<Tarjeta>();;
+    private ArrayList<Tarjeta> tarjetas= new ArrayList<Tarjeta>();
 
     public Mazo(){
-        
+
     }
 
 
@@ -95,7 +95,7 @@ public class Mazo {
             tarjetas.add(tarjetaCastigo);
         }
 
-         System.out.println(tarjetas.toString());
+         //System.out.println(tarjetas.toString());
 
 
     }
@@ -109,8 +109,8 @@ public class Mazo {
         tarjetas.remove(0);
     }
 
-    public void agregaTarjeta(){
-
+    public void agregaTarjeta(Tarjeta tarjeta){
+        tarjetas.add(0,tarjeta);
     }
 
     public Tarjeta proporcionaTarjeta(){
@@ -119,13 +119,19 @@ public class Mazo {
     }
 
     public ArrayList<Tarjeta> proporcionarTarjetas(int num) {
-        return tarjetas;
+        ArrayList<Tarjeta> t = new ArrayList<Tarjeta>();
+
+
+        for (int i = 0; i <num ; i++) {
+            t.add(tarjetas.get(0));
+            eliminaTarjeta();
+        }
+        return t;
     }
 
     @Override
     public String toString() {
         return "Mazo{" +
-                "numTarjeta=" + numTarjeta +
-                ", tarjetas=\n" + tarjetas;
+                "tarjetas=\n" + tarjetas;
     }
 }

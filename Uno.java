@@ -59,13 +59,52 @@ public class Uno {
         //System.out.println(mazo.toString());
         for (int i = 0; i <getNumJugadores() ; i++) {
             jugadores.get(i).agregarTarjeta(mazo.proporcionaTarjeta());
-            System.out.println(jugadores.get(i).toString());
+            //System.out.println(jugadores.get(i).toString());
             mazo.eliminaTarjeta();
         }
+        int mayor=-1;
+        int jugadorQueReparte=-1;
+        //En el siguiente fragmento se elige la carta mas alta obtenida al empezar el juego
+        for (int i = 0; i <getNumJugadores() ; i++) {
+            TarjetaNumerica tn;
+            TarjetaCastigo tc;
+            Tarjeta t = jugadores.get(i).getTarjetas().get(0);
+            if(t instanceof  TarjetaNumerica){
+                tn = (TarjetaNumerica) t;
+                if(tn.getNumero()>=mayor){
+                    mayor = tn.getNumero();
+                    jugadorQueReparte = i;
+                    //System.out.println(jugadorQueReparte);
+                }
+            }else if(t instanceof TarjetaCastigo){
+                tc = (TarjetaCastigo) t;
+            }
+        }
 
+        //System.out.println("El jugador que reparte es: \n" + jugadores.get(jugadorQueReparte).toString());
+        jugadores.get(jugadorQueReparte).repartirCartas(jugadores,mazo);
+
+
+        for (int i = 0; i <getNumJugadores() ; i++) {
+
+           // System.out.println(jugadores.get(i).toString());
+
+        }
         System.out.println();
+        System.out.println(mazo);
+
+
+
+
+        /*for (int i = 1; i <getNumJugadores() ; i++) {
+            if((jugadores.get(i-1).getTarjetas().get(0))>(jugadores.get(i).getTarjetas().get(0))){
+
+            }
+        }*/
+
+        /*System.out.println();
         System.out.println(mazo.toString());
-        System.out.println();
+        System.out.println();*/
         //System.out.println(jugadores.size());
 
             //jugadores.get(0).revuelveMazo(mazo);

@@ -10,15 +10,21 @@ public class Jugador {
 
 
     public void tomarCartas(Mazo mazo,int n){
-        mazo.proporcionarTarjetas(n);
+        for (int i = 0; i <n ; i++) {
+            tarjetas.add(mazo.proporcionaTarjeta());
+            mazo.eliminaTarjeta();
+        }
     }
 
     public void revuelveMazo(Mazo mazo){
         mazo.barajeaMazo();
     }
 
-    public void repartirCartas(ArrayList<Jugador> jugadores,Mazo m){
+    public void repartirCartas(ArrayList<Jugador> jugadores,Mazo mazo){
 
+        for (int i = 0; i <jugadores.size() ; i++) {
+                jugadores.get(i).tomarCartas(mazo,7);
+        }
     }
 
     public Tarjeta jugarTarjeta(Tarjeta tarjeta){
@@ -28,6 +34,10 @@ public class Jugador {
     public void agregarTarjeta(Tarjeta tarjeta){
         tarjetas = new ArrayList<Tarjeta>();
         tarjetas.add(tarjeta);
+    }
+
+    public ArrayList<Tarjeta> getTarjetas() {
+        return tarjetas;
     }
 
     public void decirUno(){

@@ -13,6 +13,10 @@ public class TarjetaNumerica extends  Tarjeta{
         this.numero = numero;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+
     @Override
     public int juegaTarjeta(){
         int i=0;
