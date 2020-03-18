@@ -14,6 +14,7 @@ public class TarjetaCastigo extends Tarjeta {
         this.tipoCastigo = tipoCastigo;
     }
 
+    @Override
     public int juegaTarjeta(){
         int i=0;
         return i;
@@ -66,6 +67,26 @@ public class TarjetaCastigo extends Tarjeta {
             case 5:
                     this.tipoCastigo = i;
             break;
+        }
+    }
+
+    public void fijarSimbolo(int i){
+        switch (i){
+            case 1:
+                this.simbolo = "castigo mas dos";
+                break;
+            case 2:
+                this.simbolo = "salto de turno";
+                break;
+            case 3:
+                this.simbolo = "cambio de sentido";
+                break;
+            case 4:
+                this.simbolo = "comodin de castigo +4";
+                break;
+            case 5:
+                this.simbolo = "comodin de color";
+                break;
         }
     }
 

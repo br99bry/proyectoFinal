@@ -6,10 +6,7 @@ public abstract class Tarjeta {
     protected int pos;
 
 
-    public int jugarTarjeta(){
-        int i=0;
-        return i;
-    }
+    public abstract int juegaTarjeta();
 
     public abstract void fijarColor(int i);
 

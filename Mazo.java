@@ -47,17 +47,53 @@ public class Mazo {
             tarjetaNumerica.setNumero(0);
             tarjetas.add(tarjetaNumerica);
         }
-    int contCast=0;
+
     for (int k= 0; k < 2; k++) {
 
-           for(int i =0; i < 4 ; i++){
-            TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
-            tarjetaCastigo.fijarCastigo(1);
-            tarjetaCastigo.fijarColor(i+1);
-            tarjetas.add(tarjetaCastigo);
-           }
+            for(int i =0; i < 4 ; i++){
+                TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
+                tarjetaCastigo.fijarCastigo(1);
+                tarjetaCastigo.fijarColor(i+1);
+                tarjetaCastigo.fijarSimbolo(1);
+                tarjetas.add(tarjetaCastigo);
+            }
+        }
 
-    }
+        for (int k= 0; k < 2; k++) {
+
+            for(int i =0; i < 4 ; i++){
+                TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
+                tarjetaCastigo.fijarCastigo(2);
+                tarjetaCastigo.fijarColor(i+1);
+                tarjetaCastigo.fijarSimbolo(2);
+                tarjetas.add(tarjetaCastigo);
+            }
+        }
+
+        for (int k= 0; k < 2; k++) {
+
+            for(int i =0; i < 4 ; i++){
+                TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
+                tarjetaCastigo.fijarCastigo(3);
+                tarjetaCastigo.fijarColor(i+1);
+                tarjetaCastigo.fijarSimbolo(3);
+                tarjetas.add(tarjetaCastigo);
+            }
+        }
+
+        for(int i =0; i < 4 ; i++){
+            TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
+            tarjetaCastigo.fijarCastigo(4);
+            tarjetaCastigo.fijarSimbolo(4);
+            tarjetas.add(tarjetaCastigo);
+        }
+
+        for(int i =0; i < 4 ; i++){
+            TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
+            tarjetaCastigo.fijarCastigo(5);
+            tarjetaCastigo.fijarSimbolo(5);
+            tarjetas.add(tarjetaCastigo);
+        }
 
          System.out.println(tarjetas.toString());
 
