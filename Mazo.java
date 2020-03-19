@@ -59,7 +59,7 @@ public class Mazo {
             tarjetas.add(tarjetaNumerica);
         }
 
-    for (int k= 0; k < 2; k++) {
+    /*for (int k= 0; k < 2; k++) {
 
             for(int i =0; i < 4 ; i++){
                 TarjetaCastigo tarjetaCastigo = new TarjetaCastigo();
@@ -104,7 +104,7 @@ public class Mazo {
             tarjetaCastigo.fijarCastigo(5);
             tarjetaCastigo.fijarSimbolo(5);
             tarjetas.add(tarjetaCastigo);
-        }
+        }*/
 
          //System.out.println(tarjetas.toString());
 
