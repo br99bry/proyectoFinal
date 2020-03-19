@@ -4,6 +4,14 @@ public class TarjetaNumerica extends  Tarjeta{
     private int numero;
     private String color;
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public TarjetaNumerica(){
         super();
 
@@ -24,6 +32,16 @@ public class TarjetaNumerica extends  Tarjeta{
         return i;
     }
 
+
+    @Override
+    public void setPos(int pos){
+        super.pos = pos;
+    }
+
+    @Override
+    public int getPos(){
+        return super.pos;
+    }
     @Override
     public void fijarColor(int i){
         super.colores = new ArrayList<String>();
@@ -51,9 +69,9 @@ public class TarjetaNumerica extends  Tarjeta{
 
     @Override
     public String toString() {
-        return "TarjetaNumerica{" +
+        return "Tarjeta posicion "+ (getPos()+1) +"\n"+
+                "Tarjeta Numerica || " +
                 "numero=" + numero +
-                ", color='" + color + '\'' +
-                '}'+"\n";
+                " || color='" + color +"\n";
     }
 }

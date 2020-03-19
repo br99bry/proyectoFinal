@@ -14,6 +14,30 @@ public class TarjetaCastigo extends Tarjeta {
         this.tipoCastigo = tipoCastigo;
     }
 
+    public String getSimbolo() {
+        return simbolo;
+    }
+
+    public void setSimbolo(String simbolo) {
+        this.simbolo = simbolo;
+    }
+
+    public int getTipoCastigo() {
+        return tipoCastigo;
+    }
+
+    public void setTipoCastigo(int tipoCastigo) {
+        this.tipoCastigo = tipoCastigo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public int juegaTarjeta(){
         int i=0;
@@ -91,11 +115,21 @@ public class TarjetaCastigo extends Tarjeta {
     }
 
     @Override
+    public int getPos(){
+        return super.pos;
+    }
+
+    @Override
+    public void setPos(int pos){
+        super.pos = pos;
+    }
+
+    @Override
     public String toString() {
-        return "TarjetaCastigo{" +
+        return "Tarjeta posicion "+ (getPos()+1) +"\n"+
+                "Tarjeta Castigo || " +
                 "simbolo=" + simbolo +
-                ", color='" + color +
-                ", castigo='" + tipoCastigo + '\'' +
-                '}'+"\n";
+                " || color='" + color +
+                " || castigo='" + tipoCastigo +"\n";
     }
 }

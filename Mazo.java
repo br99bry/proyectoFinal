@@ -9,16 +9,27 @@ public class Mazo {
 
     }
 
+    public void iniciaMazo(Tarjeta tarjeta){
+        TarjetaNumerica tn;
+        TarjetaCastigo tc;
+        Tarjeta t = tarjeta;
+        if(t instanceof  TarjetaNumerica){
+            tn = (TarjetaNumerica) t;
+            tarjetas.add(tn);
+        }else if(t instanceof TarjetaCastigo){
+            tc = (TarjetaCastigo) t;
+            tarjetas.add(tc);
+        }
+    }
 
     public void iniciaMazo (){
-
+        int pos=0;
         for (int j = 0; j <2 ; j++) {
             for (int i = 1; i <10 ; i++) {
                 TarjetaNumerica tarjetaNumerica = new TarjetaNumerica();
                 tarjetaNumerica.fijarColor(1);
                 tarjetaNumerica.setNumero(i);
                 tarjetas.add(tarjetaNumerica);
-
             }
 
             for (int i = 1; i <10 ; i++) {

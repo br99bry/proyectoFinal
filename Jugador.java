@@ -10,8 +10,11 @@ public class Jugador {
 
 
     public void tomarCartas(Mazo mazo,int n){
+        int pos =0;
         for (int i = 0; i <n ; i++) {
             tarjetas.add(mazo.proporcionaTarjeta());
+            pos = tarjetas.size();
+            tarjetas.get(pos-1).setPos(pos-1);
             mazo.eliminaTarjeta();
         }
     }
@@ -28,6 +31,9 @@ public class Jugador {
     }
 
     public Tarjeta jugarTarjeta(Tarjeta tarjeta){
+        System.out.println("La tarjeta en juego es: ");
+        System.out.println(tarjeta.toString());
+
         return tarjeta;
     }
 
@@ -41,14 +47,13 @@ public class Jugador {
     }
 
     public void decirUno(){
-
+        System.out.println("Uno");
     }
 
     @Override
     public String toString() {
-        return "Jugador{" +
-                "numJugador=" + numJugador +
-                ", tarjetas=" + tarjetas +
-                '}';
+        return "Jugador ||" +
+                " numJugador=" + numJugador +
+                " || tarjetas=" + tarjetas ;
     }
 }
